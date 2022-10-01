@@ -12,7 +12,7 @@ on:
 jobs:
   ClockIn:
     runs-on: ubuntu-latest
-    if: contains(toJson(github.event.repository.owner.id), ’Kailian-Jacy‘) 
+    if: ${{ github.event.repository.owner.name == ’Kailian-Jacy‘ }} 
     steps:
       - name: Checkout
         uses: actions/checkout@master
